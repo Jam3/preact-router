@@ -1,5 +1,6 @@
 import { cloneElement, h, Component } from 'preact';
 import { exec, pathRankSort, assign } from './util';
+import PreactTransitionGroup from 'preact-transition-group';
 
 let customHistory = null;
 
@@ -245,7 +246,10 @@ class Router extends Component {
 			}
 		}
 
-		return current;
+		const transitionGroupProps = this.props.transitionGroupProps || {};
+		return <PreactTransitionGroup {...transitionGroupProps}>
+			{current}
+		</PreactTransitionGroup>;
 	}
 }
 
