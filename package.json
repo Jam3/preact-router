@@ -86,6 +86,7 @@
     "webpack": "^1.13.1"
   },
   "dependencies": {
+    "@jam3/preact": "^8.1.0",
     "preact-transition-group": "^1.1.1"
   }
 }
